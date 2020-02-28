@@ -23,6 +23,7 @@ class MylibConan(ConanFile):
     def package(self):
         self.copy("*.h", dst="include", src="include")
         self.copy("*.hpp", dst="include", src="include")
+        self.copy("*.cpp", dst="src", src="src")
         self.copy("*my_lib.lib", dst="lib", keep_path=False)
         self.copy("*.dll", dst="bin", keep_path=False)
         self.copy("*.so", dst="lib", keep_path=False)
